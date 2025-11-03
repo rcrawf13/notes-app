@@ -1,0 +1,43 @@
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  place-items: center center;
+  height: 100%;
+  background-color: rgb(105, 44, 162);
+
+
+
+  /* Font Styling */
+  color:aliceblue;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+
+
+}
+
+
+.box {
+    background-color: white;
+    color: black;
+    width: 70%;
+    height: 20%;
+    border-radius: 15px;
+    box-shadow: black 0px 10px 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
