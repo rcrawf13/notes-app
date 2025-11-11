@@ -1,4 +1,7 @@
 
+html {
+
+}
 .roboto-font {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -8,13 +11,14 @@
 }
 #root {
 
-  --box-shadow-global: box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --box-shadow-global: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --globalBgColor: #2c7ba2;
+
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #2c7ba2;
-
+  background-color: var(--globalBgColor);
 
 
   /* Font Styling */
@@ -32,7 +36,7 @@
 .box {
     background-color: white;
     color: #5a5966;
-    width: 50vw;
+    width: 100%;
     height: auto;
     border-radius: 15px;
     box-shadow: var(--box-shadow-global);
@@ -46,6 +50,11 @@
 
 }
 
+
+h1 {
+  font-family: MV Boli;
+  font-size: xxx-large;
+}
 
 
 .inputBox, form {
@@ -66,6 +75,8 @@
 
 .descBox > textarea {
   height: 100%;
+  border-radius: 12px;
+  padding: .5rem;
 } 
 
 
@@ -94,10 +105,11 @@ form > button {
   font-size: 1.2rem;
   background-color: #2c7ba2;
   height: 15%;
-  width: 20%;
+  
   border: none;
   border-radius: 15px;
   font-weight: 700;
+  padding: .5rem;
 }
 
 label {
@@ -107,32 +119,35 @@ label {
 .appContainer {
   
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
   gap: 1.2rem;
-  
+  width: 100%;
   padding: 1.2rem;
   box-sizing: content-box;
+  overflow: hidden;
+  max-height: 90vh;
   
 }
 .savedNotesContainer {
   width: 100%;
-  height: 90vh;
+  height: auto;
   display: flex;
   align-items: self-start;
   flex-direction: column;
   gap: 1.2rem;
   overflow: hidden;
+  overflow-y: visible;
 }
 
 .savedNote {
   border-radius: 15px;
-  width: 100%;
+  width: 92%;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-self: baseline;
   background-color: aliceblue;
-
+  align-self: flex-end;
   color: #5a5966;
   box-shadow: var(--box-shadow-global);
 
@@ -142,23 +157,38 @@ label {
 .priorityColor {
   height: 100%;
   width: 20px;
-  background-color: red;
+  /* background-color: red; */
   border-radius: 12px 0px 0px 12px;
 }
+.verticalCutOut {
+  width:1% ;
+  height: 100%;
+  background-color: var(--globalBgColor);
+  
+}
+
 
 .fontLayout > h2 {
   padding: 0;
   margin: 1rem 0 0 0;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
 
+}
+
+
+.fontLayout > P {
+  min-height:30px;
 }
 
 .fontLayout {
   display: flex;
   padding-left: 1.2rem;
   flex-direction: column;
-  width: 90%;
-}
-
-.fontLayout > p {
-  
+  max-width: 75%;
+  max-height: 300px;
+  overflow: hidden;
+  height: auto;
+  overflow-wrap: break-word;
 }

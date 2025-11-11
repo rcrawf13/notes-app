@@ -9,7 +9,7 @@ function App() {
 
     <div className="appContainer">
         <div className="box">
-        <h1>Notes App</h1>
+        <h1>Notes</h1>
         <NoteForm notes={notes} setNotes={setNotes}/>
       </div>
       <div className="savedNotesContainer">
