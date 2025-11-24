@@ -1,10 +1,12 @@
 import { useState } from "react"
+import image1 from "../assets/hideIcon.png";
+import image2 from "../assets/showIcon.png";
+
 function NoteForm({setNotes, notes}) {
     // const [title, setTile] = useState("");
     // const [priority, setPriority] = useState("");
     // const [category, setCategory] = useState("");
     // const [description, setDescription] = useState("");
-
 
 
     const handleSubmit = (e) => {
@@ -39,11 +41,13 @@ function NoteForm({setNotes, notes}) {
         const noteObjCopy = {...noteObj};
         noteObjCopy[key] = value;
         setNoteObj(noteObjCopy)
-
     }
 
   return (
-    <form >
+    <form>  
+
+
+
         <div className="inputBox">
             <label htmlFor="title">Title</label>
             <input value={noteObj.title} placeholder="Title" onChange={(e)=> updateNoteObj("title", e.target.value)} type="text" id="title" />
