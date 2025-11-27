@@ -7,9 +7,9 @@ const ToggleVisBttn = ({isVisible,setIsVisible}) => {
   const imgUrl2 = {backgroundImage:`url(${image2})`};
 
   return (
-    <div className="showHideContainer">
+    <div onClick={()=>{setIsVisible(!isVisible)}}  className="showHideContainer">
           <div 
-            onClick={()=>{setIsVisible(!isVisible)}} 
+            
             className="showHideIcon"
             style={isVisible?imgUrl2:imgUrl1}
             >
